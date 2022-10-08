@@ -37,7 +37,7 @@ namespace Calculator_App
         private void buttonCE_Click(object sender, EventArgs e)
         {
 
-            txtDisplay.Text = "0";
+            txtDisplay.Text = "";
 
             string f, s;
 
@@ -50,10 +50,22 @@ namespace Calculator_App
 
         private void Operational_Func(object sender, EventArgs e)
         {
-            Button b = (Button)sender;
-            firstNum = Double.Parse(txtDisplay.Text);
-            operation = b.Text;
-            txtDisplay.Text = "";
+            try
+            {
+
+                Button b = (Button)sender;
+                firstNum = Double.Parse(txtDisplay.Text);
+                operation = b.Text;
+                txtDisplay.Text = "";
+
+            }
+            catch
+
+            {
+                
+                    MessageBox.Show("Enter digits only", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+            }
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -64,28 +76,12 @@ namespace Calculator_App
             }
             else if (txtDisplay.Text == "")
             {
-                txtDisplay.Text = "0";
+                txtDisplay.Text = "";
             }
         }
 
-        private void buttonSign_Click(object sender, EventArgs e)
-        {
-            if (txtDisplay.Text.Contains("-"))
-            {
-                txtDisplay.Text = txtDisplay.Text.Remove(0, 1);
-            }
-
-            else
-            {
-                txtDisplay.Text = "-" + txtDisplay.Text;
-            }
-        }
-        private void Pow2(object sender, EventArgs e)
-        {
-            
-            firstNum = Double.Parse(txtDisplay.Text);
-            operation = "pow";
-        }
+       
+        
 
         private void buttonEqual_Click(object sender, EventArgs e)
         {
@@ -102,19 +98,12 @@ namespace Calculator_App
                 case "*":
                     txtDisplay.Text = Convert.ToString(firstNum * secondNum);
                     break;
-                case "pow":
-                    txtDisplay.Text = Convert.ToString(Math.Pow(firstNum, 2));
-                    break;
-                case "pow3":
-                    txtDisplay.Text = Convert.ToString(Math.Pow(firstNum, 3));
-                    break;
-                case "sqrt":
-                    txtDisplay.Text = Convert.ToString(Math.Sqrt(firstNum));
-                    break;
+                
                 case "/":
                     if (secondNum == 0)
                     {
-                        MessageBox.Show("You can not divide by zero!");
+                        MessageBox.Show("You can not divide by zero!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     }
                     else
                     { txtDisplay.Text = Convert.ToString(firstNum / secondNum); }
@@ -125,17 +114,9 @@ namespace Calculator_App
             }
         }
 
-        private void sqrt(object sender, EventArgs e)
-        {
-            firstNum = Double.Parse(txtDisplay.Text);
-            operation = "sqrt";
-        }
+     
 
-        private void pow3(object sender, EventArgs e)
-        {
-            firstNum = Double.Parse(txtDisplay.Text);
-            operation = "pow3";
-        }
+        
 
         private void DotValue(object sender, EventArgs e)
         {

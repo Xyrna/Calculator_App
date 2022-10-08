@@ -32,7 +32,6 @@
             this.txtDisplay = new System.Windows.Forms.TextBox();
             this.buttonBack = new System.Windows.Forms.Button();
             this.buttonCE = new System.Windows.Forms.Button();
-            this.buttonSign = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -49,9 +48,6 @@
             this.button18 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.buttonEqual = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtDisplay
@@ -60,7 +56,7 @@
             this.txtDisplay.Location = new System.Drawing.Point(13, 12);
             this.txtDisplay.Multiline = true;
             this.txtDisplay.Name = "txtDisplay";
-            this.txtDisplay.Size = new System.Drawing.Size(489, 126);
+            this.txtDisplay.Size = new System.Drawing.Size(389, 126);
             this.txtDisplay.TabIndex = 0;
             this.txtDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -89,19 +85,6 @@
             this.buttonCE.Text = "C";
             this.buttonCE.UseVisualStyleBackColor = false;
             this.buttonCE.Click += new System.EventHandler(this.buttonCE_Click);
-            // 
-            // buttonSign
-            // 
-            this.buttonSign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.buttonSign.Font = new System.Drawing.Font("Agency FB", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSign.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonSign.Location = new System.Drawing.Point(408, 144);
-            this.buttonSign.Name = "buttonSign";
-            this.buttonSign.Size = new System.Drawing.Size(93, 85);
-            this.buttonSign.TabIndex = 4;
-            this.buttonSign.Text = "±";
-            this.buttonSign.UseVisualStyleBackColor = false;
-            this.buttonSign.Click += new System.EventHandler(this.buttonSign_Click);
             // 
             // button5
             // 
@@ -277,7 +260,7 @@
             this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button18.Font = new System.Drawing.Font("Agency FB", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button18.ForeColor = System.Drawing.SystemColors.Control;
-            this.button18.Location = new System.Drawing.Point(111, 508);
+            this.button18.Location = new System.Drawing.Point(210, 508);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(93, 85);
             this.button18.TabIndex = 19;
@@ -292,7 +275,7 @@
             this.button19.ForeColor = System.Drawing.SystemColors.Control;
             this.button19.Location = new System.Drawing.Point(12, 508);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(93, 85);
+            this.button19.Size = new System.Drawing.Size(192, 85);
             this.button19.TabIndex = 18;
             this.button19.Text = "0";
             this.button19.UseVisualStyleBackColor = false;
@@ -303,62 +286,20 @@
             this.buttonEqual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.buttonEqual.Font = new System.Drawing.Font("Agency FB", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEqual.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonEqual.Location = new System.Drawing.Point(211, 508);
+            this.buttonEqual.Location = new System.Drawing.Point(309, 508);
             this.buttonEqual.Name = "buttonEqual";
-            this.buttonEqual.Size = new System.Drawing.Size(291, 85);
+            this.buttonEqual.Size = new System.Drawing.Size(93, 85);
             this.buttonEqual.TabIndex = 17;
             this.buttonEqual.Text = "=";
             this.buttonEqual.UseVisualStyleBackColor = false;
             this.buttonEqual.Click += new System.EventHandler(this.buttonEqual_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button4.Font = new System.Drawing.Font("Agency FB", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.Control;
-            this.button4.Location = new System.Drawing.Point(408, 326);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(93, 85);
-            this.button4.TabIndex = 24;
-            this.button4.Text = "x²";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.Pow2);
-            // 
-            // button20
-            // 
-            this.button20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button20.Font = new System.Drawing.Font("Agency FB", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.ForeColor = System.Drawing.SystemColors.Control;
-            this.button20.Location = new System.Drawing.Point(408, 417);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(93, 85);
-            this.button20.TabIndex = 25;
-            this.button20.Text = "√";
-            this.button20.UseVisualStyleBackColor = false;
-            this.button20.Click += new System.EventHandler(this.sqrt);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Font = new System.Drawing.Font("Agency FB", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(408, 235);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 85);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "x³";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.pow3);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(514, 613);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button20);
-            this.Controls.Add(this.button4);
+            this.ClientSize = new System.Drawing.Size(415, 601);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.button18);
             this.Controls.Add(this.button19);
@@ -375,7 +316,6 @@
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.buttonSign);
             this.Controls.Add(this.buttonCE);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.txtDisplay);
@@ -395,7 +335,6 @@
         private System.Windows.Forms.TextBox txtDisplay;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Button buttonCE;
-        private System.Windows.Forms.Button buttonSign;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
@@ -412,9 +351,6 @@
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button buttonEqual;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button1;
     }
 }
 
